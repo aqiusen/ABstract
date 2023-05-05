@@ -1,0 +1,11 @@
+plugins {
+    id 'api'
+}
+
+
+dependencies {
+    implementation project(':domain:feature')
+    implementation project(':persistent:persistent-feature')
+    implementation project(':api:api-core')
+    testImplementation  project(':api:api-core').sourceSets.test.output
+}

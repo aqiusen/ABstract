@@ -19,9 +19,13 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/3.0.6/40ac53fa1e5c53d15c7058603e26dd03a99223ae/spring-boot-configuration-processor-3.0.6.jar" />
         </processorPath>
         <module name="ABstract.persistent.persistent-feature.main" />
+        <module name="ABstract.api.api-feature.main" />
+        <module name="ABstract.api.api-core.main" />
+        <module name="ABstract.api.api-feature.test" />
+        <module name="ABstract.persistent.persistent-core.main" />
+        <module name="ABstract.api.api-core.test" />
         <module name="ABstract.persistent.persistent-feature.test" />
         <module name="ABstract.persistent.persistent-core.test" />
-        <module name="ABstract.persistent.persistent-core.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

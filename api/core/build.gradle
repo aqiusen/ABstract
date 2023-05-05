@@ -1,0 +1,7 @@
+plugins {
+    id 'api'
+}
+
+dependencies {
+    implementation project(':domain:core')
+}
