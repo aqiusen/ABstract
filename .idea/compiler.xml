@@ -7,8 +7,21 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.26/8f8cf0372abf564913e9796623aac4c8ea44025a/lombok-1.18.26.jar" />
         </processorPath>
-        <module name="ABstract.domain.main" />
-        <module name="ABstract.domain.test" />
+        <module name="ABstract.domain.feature.main" />
+        <module name="ABstract.domain.core.main" />
+        <module name="ABstract.domain.feature.test" />
+        <module name="ABstract.domain.core.test" />
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.26/8f8cf0372abf564913e9796623aac4c8ea44025a/lombok-1.18.26.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/3.0.6/40ac53fa1e5c53d15c7058603e26dd03a99223ae/spring-boot-configuration-processor-3.0.6.jar" />
+        </processorPath>
+        <module name="ABstract.persistent.persistent-feature.main" />
+        <module name="ABstract.persistent.persistent-feature.test" />
+        <module name="ABstract.persistent.persistent-core.test" />
+        <module name="ABstract.persistent.persistent-core.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

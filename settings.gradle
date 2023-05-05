@@ -1,4 +1,12 @@
 rootProject.name = 'ABstract'
 
 include 'domain'
+include 'domain:feature'
+include 'domain:core'
+findProject(':domain:core')?.name = 'core'
+include 'persistent'
+include 'persistent:feature'
+findProject(':persistent:feature')?.name = 'persistent-feature'
+include 'persistent:core'
+findProject(':persistent:core')?.name = 'persistent-core'
 

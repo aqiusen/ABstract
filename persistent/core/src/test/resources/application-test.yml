@@ -1,0 +1,12 @@
+spring:
+  data:
+    couchbase:
+      repositories:
+        type: auto
+      auto-index: false
+      bucket-name: ${BUCKET_NAME}
+
+  couchbase:
+    connection-string: ${CONNECTION_STRING}
+    username: ${USERNAME}
+    password: ${PASSWORD}

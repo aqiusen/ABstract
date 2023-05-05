@@ -24,7 +24,9 @@ dependencies {
 
     testImplementation 'org.projectlombok:lombok:1.18.26'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
-
+    testImplementation 'org.mockito:mockito-core:5.2.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.2.0'
+    testImplementation 'io.projectreactor:reactor-test:3.5.5'
 }
 
 test {

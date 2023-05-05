@@ -1,0 +1,7 @@
+plugins {
+    id 'domain'
+}
+
+dependencies {
+    implementation project(':domain:core')
+}

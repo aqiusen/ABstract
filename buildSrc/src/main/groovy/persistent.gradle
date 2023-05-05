@@ -1,0 +1,23 @@
+plugins {
+    id "domain"
+    id "io.spring.dependency-management"
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.boot:spring-boot-dependencies:3.0.6"
+    }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-couchbase-reactive'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    testImplementation 'org.testcontainers:couchbase:1.18.0'
+    testImplementation "org.testcontainers:junit-jupiter:1.18.0"
+    testAnnotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+
+//    testImplementation 'com.github.docker-java:docker-java-api:3.2.8'
+//    testImplementation 'com.github.docker-java:docker-java-transport-zerodep:3.2.8'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

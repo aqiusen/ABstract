@@ -11,6 +11,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/domain" />
+            <option value="$PROJECT_DIR$/domain/core" />
+            <option value="$PROJECT_DIR$/domain/feature" />
+            <option value="$PROJECT_DIR$/persistent" />
+            <option value="$PROJECT_DIR$/persistent/core" />
+            <option value="$PROJECT_DIR$/persistent/feature" />
           </set>
         </option>
       </GradleProjectSettings>
