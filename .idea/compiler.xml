@@ -20,9 +20,11 @@
         </processorPath>
         <module name="ABstract.persistent.persistent-feature.main" />
         <module name="ABstract.api.api-feature.main" />
+        <module name="ABstract.main.test" />
         <module name="ABstract.api.api-core.main" />
         <module name="ABstract.api.api-feature.test" />
         <module name="ABstract.persistent.persistent-core.main" />
+        <module name="ABstract.main.main" />
         <module name="ABstract.api.api-core.test" />
         <module name="ABstract.persistent.persistent-feature.test" />
         <module name="ABstract.persistent.persistent-core.test" />

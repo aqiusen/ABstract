@@ -14,4 +14,5 @@ include 'api:feature'
 findProject(':api:feature')?.name = 'api-feature'
 include 'api:core'
 findProject(':api:core')?.name = 'api-core'
+include 'main'
 

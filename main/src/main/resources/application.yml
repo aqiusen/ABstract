@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  couchbase:
+    env:
+      endpoints:
+        query-service:
+          max-endpoints: 8
+        key-value: 5
+      timeout:
+        connect: 15s
+
+---
+spring:
+  config:
+    activate:
+      on-profile: default
+
+  couchbase:
+    username: bucket1
+    password: bucket1pass
+    connectionString: couchbase://127.0.0.1
+  data:
+    couchbase:
+      repositories:
+        type: auto
+      auto-index: true
+      bucket-name: bucket1
+

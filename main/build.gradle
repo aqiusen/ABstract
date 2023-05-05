@@ -1,0 +1,8 @@
+plugins {
+    id 'api'
+    id 'org.springframework.boot' version '3.0.6'
+}
+
+dependencies {
+    implementation project(':api:api-feature')
+}
