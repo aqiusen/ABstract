@@ -6,6 +6,9 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+/**
+ * FeatureFlagResponse represents a feature flag in the API.
+ */
 @Getter
 @Setter
 @Builder
@@ -28,6 +31,12 @@ public class FeatureFlagResponse {
 
     private FeatureFlag.FeatureTemplate template;
 
+    /**
+     * Creates a FeatureFlagResponse from a FeatureFlag.
+     *
+     * @param featureFlag the FeatureFlag to convert
+     * @return the FeatureFlagResponse
+     */
     public static FeatureFlagResponse from(FeatureFlag featureFlag) {
         return FeatureFlagResponse.builder()
                 .featureKey(featureFlag.getId().featureKey())

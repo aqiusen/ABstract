@@ -6,6 +6,9 @@ import org.testcontainers.couchbase.CouchbaseContainer;
 
 import java.time.Duration;
 
+/**
+ * Couchbase test container.
+ */
 public class CouchbaseTestContainer extends CouchbaseContainer {
     private static CouchbaseTestContainer container;
 
@@ -28,6 +31,11 @@ public class CouchbaseTestContainer extends CouchbaseContainer {
         waitingFor(Wait.forHealthcheck());
     }
 
+    /**
+     * Get instance.
+     *
+     * @return CouchbaseTestContainer
+     */
     public static CouchbaseTestContainer getInstance() {
         if (container == null) {
             container = new CouchbaseTestContainer();

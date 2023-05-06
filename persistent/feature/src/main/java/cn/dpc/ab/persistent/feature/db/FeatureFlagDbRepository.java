@@ -5,8 +5,11 @@ import org.springframework.data.couchbase.repository.ScanConsistency;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Flux;
 
+/**
+ * FeatureFlagDBRepository provides a skeleton implementation of the FeatureFlagDBRepository interface.
+ */
 @ScanConsistency(query = QueryScanConsistency.REQUEST_PLUS)
-public interface FeatureFlagDBRepository extends ReactiveCrudRepository<FeatureFlagDB, String> {
+public interface FeatureFlagDbRepository extends ReactiveCrudRepository<FeatureFlagDb, String> {
 
-    Flux<FeatureFlagDB> findAll();
+    Flux<FeatureFlagDb> findAll();
 }

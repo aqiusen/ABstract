@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * FeatureFlagApi represents the API for feature flags.
+ */
 @RestController
 @RequestMapping("/feature-flags")
 @RequiredArgsConstructor

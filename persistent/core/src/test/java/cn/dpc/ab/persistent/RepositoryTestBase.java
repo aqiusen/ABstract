@@ -11,6 +11,9 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.shaded.org.awaitility.Awaitility;
 
+/**
+ * Base class for repository tests.
+ */
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT, classes = TestConfiguration.class)
 @Testcontainers
@@ -18,7 +21,7 @@ import org.testcontainers.shaded.org.awaitility.Awaitility;
 public class RepositoryTestBase {
     @ClassRule
     @Container
-    final static CouchbaseContainer couchbaseContainer = CouchbaseTestContainer.getInstance();
+    static final CouchbaseContainer couchbaseContainer = CouchbaseTestContainer.getInstance();
 
     @BeforeAll
     public static void setup() {

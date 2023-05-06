@@ -7,6 +7,9 @@ import org.springframework.data.couchbase.core.mapping.CouchbasePersistentProper
 import org.springframework.data.mapping.context.MappingContext;
 import org.springframework.data.util.TypeInformation;
 
+/**
+ * Custom couchbase converter.
+ */
 public class CustomMappingCouchbaseConverter extends MappingCouchbaseConverter {
 
     public CustomMappingCouchbaseConverter(MappingContext<? extends CouchbasePersistentEntity<?>,

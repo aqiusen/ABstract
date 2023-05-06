@@ -16,9 +16,12 @@ import java.util.Optional;
 
 import static org.springframework.data.couchbase.core.mapping.id.GenerationStrategy.USE_ATTRIBUTES;
 
+/**
+ * FeatureFlagDb represents a feature flag in the database.
+ */
 @Document
 @Data
-public class FeatureFlagDB {
+public class FeatureFlagDb {
 
     @Version
     private long version;
@@ -41,8 +44,14 @@ public class FeatureFlagDB {
         return PREFIX + "." + featureKey;
     }
 
-    public static FeatureFlagDB from(FeatureFlag featureFlag) {
-        FeatureFlagDB db = new FeatureFlagDB();
+    /**
+     * Creates a FeatureFlagDb from a FeatureFlag.
+     *
+     * @param featureFlag the FeatureFlag
+     * @return the FeatureFlagDb
+     */
+    public static FeatureFlagDb from(FeatureFlag featureFlag) {
+        FeatureFlagDb db = new FeatureFlagDb();
         db.setId(idFromFeatureKey(featureFlag.getId().featureKey()));
         db.setFeatureKey(featureFlag.getId().featureKey());
         db.setDescription(from(featureFlag.getDescription()));

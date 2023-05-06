@@ -1,6 +1,7 @@
 plugins {
-    id "java"
-    id "jacoco"
+    id 'java'
+    id 'jacoco'
+    id 'checkstyle'
 }
 
 group 'cn.dpc.ab'
@@ -37,3 +38,22 @@ test {
 jacocoTestReport {
     dependsOn test
 }
+
+checkstyle {
+    toolVersion = '10.10.0'
+    sourceSets = [sourceSets.main]
+    ignoreFailures = false
+    maxWarnings = 0
+    configFile file("${rootDir}/config/checkstyle/checkstyle.xml")
+}
+
+checkstyleMain {
+    source = ["src/main/java"]
+}
+
+checkstyleTest {
+    source = ["src/test/java"]
+}
+
+check.dependsOn 'checkstyleMain'
+check.dependsOn 'checkstyleTest'

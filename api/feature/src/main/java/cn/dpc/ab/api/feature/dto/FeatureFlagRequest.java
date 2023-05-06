@@ -1,11 +1,11 @@
 package cn.dpc.ab.api.feature.dto;
 
 import cn.dpc.ab.domain.feature.FeatureFlag;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
-import java.time.LocalDateTime;
-
+/**
+ * FeatureFlagRequest represents a feature flag in the API.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,6 +23,11 @@ public class FeatureFlagRequest {
     private FeatureFlag.FeatureTemplate template;
 
 
+    /**
+     * Creates a FeatureFlag from a FeatureFlagRequest.
+     *
+     * @return the FeatureFlag
+     */
     public FeatureFlag toFeatureFlag() {
         return new FeatureFlag(
                 new FeatureFlag.FeatureFlagId(featureKey),

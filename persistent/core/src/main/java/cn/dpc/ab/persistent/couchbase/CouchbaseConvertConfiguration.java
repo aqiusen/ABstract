@@ -12,6 +12,9 @@ import org.springframework.data.couchbase.core.convert.MappingCouchbaseConverter
 import org.springframework.data.couchbase.core.mapping.CouchbaseMappingContext;
 import org.springframework.data.couchbase.repository.config.EnableReactiveCouchbaseRepositories;
 
+/**
+ * Couchbase convert configuration.
+ */
 @Configuration
 @Slf4j
 @EnableReactiveCouchbaseRepositories
@@ -20,6 +23,15 @@ public class CouchbaseConvertConfiguration extends AbstractCouchbaseConfiguratio
 
     private final CouchbaseProperties couchbaseProperties;
     private final CouchbaseDataProperties couchbaseDataProperties;
+
+
+    /**
+     * Custom couchbase converter.
+     *
+     * @param couchbaseMappingContext  CouchbaseMappingContext
+     * @param couchbaseCustomConversions CouchbaseCustomConversions
+     * @return MappingCouchbaseConverter
+     */
     @Bean
     public MappingCouchbaseConverter mappingCouchbaseConverter(CouchbaseMappingContext couchbaseMappingContext,
                                                                CouchbaseCustomConversions couchbaseCustomConversions) {
@@ -27,6 +39,7 @@ public class CouchbaseConvertConfiguration extends AbstractCouchbaseConfiguratio
         converter.setCustomConversions(couchbaseCustomConversions);
         return converter;
     }
+
 
     @Override
     protected boolean autoIndexCreation() {
